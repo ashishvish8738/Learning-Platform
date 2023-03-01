@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta', sans-serif;
+}
+iframe{
+    width: 100%;
+    height:100%;
+    
+    }
+
+table{
+    width:70%;
+    border-radius: 5px;
+    height: auto;
+    margin: auto;
+    
+      }
+th, td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c-Java{
+    display:none;
+
+}
+.c-Javascript
+{
+    display :block;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.c-React{
+    display:none;
+}
+.course_content
+{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.head{
+    min-height: 110vh;
+    width: 90%;
+    margin: auto;
+    background:url(u1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px;
+}
+
+nav{
+    display: flex;
+    padding: 5% 6%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav img {
+    width: 60px;
+}
+
+.navigation {
+    text-align: right;
+}
+
+.navigation ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 13px 15px;
+    position: relative;
+}
+
+.navigation ul li a{
+    color: rgb(16, 51, 29);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navigation ul li ::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(143, 9, 9);
+    display: block;
+    margin: auto;
+    transition: 0.9s;
+}
+
+.navigation ul li:hover ::after {
+ width: 100%;
+}
+
+.textbox {
+    width: 90%;
+    color: rgb(34, 8, 37);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.textbox h1 {
+    font-size: 62px;
+}
+
+.textbox p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: rgb(8, 1, 1);
+}
+
+.btn1 {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(239, 250, 253);
+    background-color: rgb(73, 90, 89);
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 12px 34px;
+    position: relative;
+    
+}
+
+.btn1:hover {
+    border: 1px solid rgb(245, 235, 235);
+    background: rgb(4, 48, 45);
+    transition: 1s;
+    color: aliceblue;
+}
+
+
+/* responive for small screens devices*/
+@media(max-width:700px) {
+    .textbox h1 {
+        font-size: 20px;
+
+    }
+    .navigation ul li {
+        display: block;
+    }
+    
+
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .navigation {
+        padding: 30px;
+    }
+}
+
+/* ----course----- */
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+
+}
+
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col {
+    flex-basis: 31%;
+    background: rgba(26, 255, 217, 0.281);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing:border-box ;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(1,1,1,1);
+}
+
+
+
+/* ----campus--- */
+
+.campus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ---facilities---- */
+
+.facilities {
+
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facility-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facility-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facility-col p {
+    padding: 0;
+}
+.facility-col h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/* ------testimonial------ */
+
+.testimonials {
+    width:80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.testimonial-col {
+flex-basis: 44%;
+border: radius 10px;
+margin-bottom: 5%;
+text-align: left;
+border-radius: 10px;
+background: rgb(14, 189, 241);
+padding: 25px;
+cursor: pointer;
+display: flex;
+}
+
+.testimonial-col img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonial-col p {
+    padding: 0;
+    
+}
+
+.testimonial-col h3  {
+    margin: top 15px;
+    text-align: left;
+}
+
+/* ------call to action---- */
+.cta {
+margin: 100px auto;
+width: 80%;
+background-image:linear-gradient(rgba(247, 221, 221, 0.7),rgba(0,0,0,0.7)), url(banner2.jpg) ;
+background-position: center;
+background-size: cover;
+border-radius: 10px;
+text-align: center;
+padding: 100px 0;
+}
+
+.cta h1 {
+    color: white;
+    margin-bottom: 40px;
+    padding: 0; 
+}
+
+/* ---footer-- */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom:25px ;
+    margin-top: 20px;
+    font-weight: 600;
+
+}
+
+/* -----About us page---- */
+
+.sub-head {
+height: 20vh;
+width: 100%;
+background-image:url(background.jpg);
+background-position: center;
+background-size: cover;
+text-align: center;
+color: white;
+}
+
+.sub-head h1 {
+    margin-top: 100px;
+}
+
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col {
+    width: 100%;
+}
+
+.about-col h1 {
+    padding-top: 0;
+    text-align: center;
+}
+
+.about-col p {
+    padding: 15px 0 25 px;
+    text-align:  center;
+}
+    </style>
+</head>
+<body>
+         <nav>
+         <a href="index.html"><img src="logo1.png"></a>
+     
+             <div class="navigation">
+                <ul>
+                    <!-- link not specified -->
+                     <li><a href="">HOME</a></li>
+                     <li><a href="">ABOUT</a></li>
+                     <li><a href="">COURSE</a></li>
+                     <li><a href="">BLOG</a></li>
+                     <li><a href="">CONTACT</a></li>
+                     <!-- link not specified -->
+                 </ul>
+                </div>    
+     </nav>
+    <section class="head"> 
+<br>
+        <!-- navigation bar  -->
+
+
+     <div class="textbox">
+    
+              <a href="" class="btn1">Know More</a>
+     </div>
+    </div>
+    </section>
+
+
+ <!-- ---course---- -->
+<section class="course">
+    <h1> Courses we Offer</h1>
+    <p> Designed to get you hired, this immersive full stack developer course online features best-in-class live training, learn-by-doing with Cloud Labs and more. Build a solid foundation 
+        as you go from zero programming experience to gaining immediately demonstrable full stack skills to impress top tech recruiters and land a tech job in a product-based company</p>
+
+    <div class="row">
+        
+        <div class="course-col">
+            <span class="React" onclick="react()">  
+            <h3>React</h3>
+            <p>React makes it painless to create interactive UIs.
+                 Design simple views for each state in your application,
+                  and React will efficiently update and 
+                render just the right components when your data changes.</p>
+                </span>  
+        </div>
+ 
+        <div class="course-col">
+            <h3>JavaScript</h3>
+            <p>JavaScript is among the most powerful and flexible 
+                programming languages of the web. It powers the
+                 dynamic behavior on most websites, including this one.</p>
+        </div>
+        <div class="course-col">
+            <h3>JAVA</h3>
+            <p>Java is a programming language and a platform. Java is a high level, 
+                robust, object-oriented and secure programming language.</p>
+        </div>
+    </div>
+</section>
+<!-- course main block content -->
+
+
+
+<!-- course with videos -->
+<section class="course_content">
+<h3>Take a look at the video of our class video  lectures</h3>
+    <div class ="c-Javascript">
+          <table>
+            <tr>
+                <th>
+                <iframe src="https://www.youtube.com/embed/3NoX7TzZ5_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </th>
+                <th>
+                <iframe src="https://www.youtube.com/embed/UFvQpuaZfF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </th>
+                <th>
+                    <iframe src="https://www.youtube.com/embed/ab7xzKyEfyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </th>
+            </tr>
+      
+            <tr>
+                <th>
+                <iframe  src="https://www.youtube.com/embed/3NoX7TzZ5_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </th>
+                <th>
+                <iframe src="https://www.youtube.com/embed/kpmbmk-Aojs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> 
+                </iframe>
+                </th>
+                <th>
+                    <iframe src="https://www.youtube.com/embed/xzrFbKZeZP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </th>
+            </tr>
+        
+        
+            <tr>
+                <th>
+                <iframe src="https://www.youtube.com/embed/ab7xzKyEfyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </th>
+                <th>
+                    <iframe src="https://www.youtube.com/embed/7Bd9HP5d9M8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                </th>
+            </tr>
+        
+        
+            <tr>
+                <th>
+                <iframe src="https://www.youtube.com/embed/ab7xzKyEfyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </th>
+                <th>
+                  <iframe  src="https://www.youtube.com/embed/kHNQKGo8SUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </th>
+            </tr>
+          </table> 
+    </div>
+      
+            
+            
+            
+      
+
+
+    
+    <div class ="c-Java">
+        <table>
+          <tr>
+              <th>
+              <iframe src="https://www.youtube.com/embed/3NoX7TzZ5_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </th>
+              <th>
+              <iframe src="https://www.youtube.com/embed/UFvQpuaZfF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </th>
+              <th>
+              <iframe src="https://www.youtube.com/embed/xzrFbKZeZP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </th>
+          </tr>
+    
+          <tr>
+              <th>
+              <iframe  src="https://www.youtube.com/embed/3NoX7TzZ5_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </th>
+              <th>
+              <iframe src="https://www.youtube.com/embed/kpmbmk-Aojs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> 
+              </iframe>
+              </th>
+              <th>
+              <iframe src="https://www.youtube.com/embed/7Bd9HP5d9M8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+              </th>
+          </tr>
+      
+      
+          <tr>
+              <th>
+              <iframe src="https://www.youtube.com/embed/ab7xzKyEfyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </th>
+              <th>
+                <iframe  src="https://www.youtube.com/embed/kHNQKGo8SUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </th>
+          </tr>
+
+        </table> 
+  </div>
+
+
+
+
+  <div class ="c-React">
+    <table>
+      <tr>
+          <th>
+          <iframe src="https://www.youtube.com/embed/3NoX7TzZ5_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </th>
+          <th>
+          <iframe src="https://www.youtube.com/embed/UFvQpuaZfF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </th>
+          <th>
+          <iframe src="https://www.youtube.com/embed/xzrFbKZeZP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </th>
+      </tr>
+
+      <tr>
+          <th>
+          <iframe  src="https://www.youtube.com/embed/3NoX7TzZ5_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </th>
+          <th>
+          <iframe src="https://www.youtube.com/embed/kpmbmk-Aojs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> 
+          </iframe>
+          </th>
+          <th>
+          <iframe src="https://www.youtube.com/embed/7Bd9HP5d9M8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+          </th>
+      </tr>
+  
+  
+      <tr>
+          <th>
+          <iframe src="https://www.youtube.com/embed/ab7xzKyEfyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </th>
+          <th>
+            <iframe  src="https://www.youtube.com/embed/kHNQKGo8SUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </th>
+      </tr>
+
+    </table> 
+</div>
+
+</section>
+<!-- ---course with video (youtube link)--- -->
+
+
+
+
+<!-- ---facilities----- -->
+
+<section>
+    <div class="facilities">
+        <h1>
+            Start anywhere, Learn, Upskill, Grow with us.
+        </h1>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo praesentium soluta consectet voluptatum.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="facility-col">
+            <img src="u1.jpg">
+            <h3>Live Editor</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo praesentium soluta consectet voluptatum.</p>
+        </div>
+  
+
+    <div class="facility-col">
+        <img src="c1.jpg">
+        <h3>Recorded classes</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo praesentium soluta consectet voluptatum.</p>
+    </div>
+
+   
+
+    <div class="facility-col">
+        <img src="u1.jpg">
+        <h3>Mentor 1 : 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo praesentium soluta consectet voluptatum.</p>
+    </div>
+</div>
+</section>
+
+<!-- ----testimonials----- -->
+<section class="testimonials">
+  <h1> What Our Student Have To say</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo praesentium soluta consectet voluptatum.  
+  </p>
+
+  <div class="row">
+      <div class="testimonial-col">
+          <img src="user1.jpg">
+          <div>
+              <p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquam id a possimus 
+                    voluptatum nam exercitationem earum officia, rerum tempore mollitia natus aperiam deleniti facilis ipsa, 
+                    neque deserunt illo sed!</p>
+              </p>
+              <h3>
+                  Christiana Stones
+              </h3>
+              
+          </div>
+      </div>
+
+      <div class="testimonial-col">
+        <img src="user2.jpg">
+        <div>
+            
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquam id a possimus 
+                  voluptatum nam exercitationem earum officia, rerum tempore mollitia natus aperiam deleniti facilis ipsa, 
+                  neque deserunt illo sed!</p>
+            
+            <h3>
+                Roger Adams
+            </h3>
+          
+        </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- -----Call to Action---- -->
+
+<section class="cta">
+    <h1>For more details </h1>
+    <a href=""class="btn1">CONTACT US</a>
+
+</section>
+
+<!-- ------Footer------ -->
+
+<section class="footer">
+   
+  
+</section>
+
+
+</body>
+</html>
